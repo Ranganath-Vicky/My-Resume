@@ -1,0 +1,157 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[15pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+\definecolor{darktext}{HTML}{000000}
+\definecolor{text}{HTML}{000000}
+\definecolor{text}{HTML}{000000}
+\definecolor{text}{HTML}{000000}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\makeatletter
+\patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
+\makeatother
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{profile}
+\name{\textbf{\color{0395DE}Ranganath} Srinivasan Kalaimani }
+\position{}
+% \address{246-1002, Gwangmyeongmayrouge Apt. 86, Cheongna lime-ro, Seo-gu, Incheon-si, 404-180, Rep. of KOREA}
+
+\mobile{\normalsize{(+61) 452237710}}
+\email{ranganath.sk@hotmail.com}
+% \homepage{michaelpollind.com}
+\linkedin{ranganath-vicky}
+\github{Ranganath-Vicky}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \extrainfo{extra informations}
+
+% \quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+\usepackage{multicol}
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+%\makecvfooter
+  %{\today}
+  %{Ranganath S Kalaimani~~~·~~~Résumé}
+  %{\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/summary.tex}
+\input{resume/experience.tex}
+\input{resume/education.tex}
+\input{resume/projects.tex}
+
+% \input{resume/honors.tex}
+% \input{resume/writing.tex}
+% \input{resume/committees.tex}
+% \input{resume/organizations.tex}
+% \input{resume/language_frameworks.tex}
+\cvsection{Certification}
+\begin{cvcerti}
+    \cventry
+        {} % Affiliation/role
+        {} % Organization/group
+        {} % Location
+        {} % Date(s)
+        {
+        \vspace{-0.5cm}
+        \begin{cvitems} % Description(s) of experience/contributions/knowledge
+        \begin{multicols}{2}
+             \normalsize{\item {Udemy | Machine Learning A-Z™ Hands-On Python and R} 
+             \item {Udemy | Modern React Java Script with Redux}
+             \item {Lema Labs | Kaizen Robotics Advance level} 
+             \item{Amazon Web Service | ML for Business Challenges } 
+             \item{Amazon Web Service | Real World Machine Learning Decisions}
+             \item{Data Camp | Data Manipulation Track in Python}}
+        \end{multicols}
+        \end{cvitems}
+        }  
+\end{cvcerti}
+
+\input{resume/extracurricular.tex}
+\cvsection{Skills}
+\begin{cvskills}
+    \cventry
+        {} % Affiliation/role
+        {} % Organization/group
+        {} % Location
+        {} % Date(s)
+        {
+        \vspace{-0.6cm}
+        \begin{cvitems} % Description(s) of experience/contributions/knowledge
+        \begin{multicols}{2}
+            \normalsize{\item{\textbf{Programming} | Python, R}
+            \item{\textbf{Packages} | Scikit-Learn, Pandas,Numpy,NLTK,Matplotlib}
+            \item{\textbf{Visualization} | Tableau, Power BI,R Shiny package, D3 JS}
+            \item{\textbf{Big Data} | Apache Hadoop, Hive, Apache Spark}
+            \item{\textbf{Database} | SQL, DBMS,Relational \& Non relational Database}
+            % \item{\textbf{MS Office Tools} | Excel, Word, Powerpoint}
+            \item{Data Wrangling \& Modelling}
+            \item{Time series forecasting, Statistical Modelling \& Analysis}
+            \item{\textbf{Cloud Platform} | AWS, GCP}
+            \item{\textbf{Web Development} HTML and CSS}
+            \item{\textbf{Tools} | Matlab}}
+        \end{multicols}
+        \end{cvitems}
+        }
+\end{cvskills}
+%-----------------------------------------------------------------------
+\end{document}
